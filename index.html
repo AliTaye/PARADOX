@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PARADOX — The Interface Is The Puzzle</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Syne+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       GLOBAL OVERLAYS
+  ═══════════════════════════════════════════════════ -->
+  <div id="noise-overlay"></div>
+  <div id="scanlines"></div>
+
+  <!-- ═══════════════════════════════════════════════════
+       START SCREEN
+  ═══════════════════════════════════════════════════ -->
+  <section id="start-screen" class="screen active">
+    <div class="start-content">
+      <div class="glitch-wrapper">
+        <h1 class="game-title" data-text="PARADOX">PARADOX</h1>
+      </div>
+      <p class="subtitle">The interface is a puzzle.</p>
+      <p class="subtitle-2">Do not trust what you see.<br>Think outside the viewport.</p>
+      <div class="instruction-block">
+        <span class="inst-line">↳ Click. Drag. Scroll. Resize.</span>
+        <span class="inst-line">↳ The rules are hidden in the UI itself.</span>
+        <span class="inst-line">↳ 20 levels. Zero mercy.</span>
+      </div>
+      <button id="start-btn" class="primary-btn">
+        <span>BEGIN</span>
+        <div class="btn-glow"></div>
+      </button>
+    </div>
+    <div class="corner-deco top-left">PARADOX</div>
+    <div class="corner-deco top-right">v1.0</div>
+    <div class="corner-deco bottom-left">UI/UX HORROR</div>
+    <div class="corner-deco bottom-right">20 LEVELS</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       GAME SCREEN (Levels load here)
+  ═══════════════════════════════════════════════════ -->
+  <section id="game-screen" class="screen">
+
+    <!-- HUD -->
+    <div id="hud">
+      <div id="level-indicator">LEVEL <span id="level-num">01</span></div>
+      <div id="level-title-hud"></div>
+      <button id="restart-btn" class="hud-btn">↺</button>
+    </div>
+
+    <!-- Level Stage — puzzle content mounts here -->
+    <div id="stage"></div>
+
+    <!-- Success overlay (appears on level complete) -->
+    <div id="success-overlay" class="hidden">
+      <div class="success-inner">
+        <div class="success-check">✓</div>
+        <p class="success-text">LAYER DISSOLVED</p>
+        <p class="success-sub">Reality shifts…</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       END SCREEN
+  ═══════════════════════════════════════════════════ -->
+  <section id="end-screen" class="screen">
+    <div class="end-content">
+      <h2 class="end-title">YOU SAW THROUGH<br>THE ILLUSION.</h2>
+      <p class="end-sub">20 layers. Dissolved.</p>
+      <p class="end-sub-2">The interface was never real.</p>
+      <button id="play-again-btn" class="primary-btn">AGAIN →</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
